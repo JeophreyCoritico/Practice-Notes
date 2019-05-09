@@ -1,0 +1,55 @@
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+
+namespace Week10_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+
+            int[] values = new int[6];
+
+            writeAllValues(values.ToList());
+
+            List<int> listValues = new List<int>();
+            listValues.Add(5);
+            listValues.RemoveAt(0);
+
+            writeAllValues(listValues.ToArray());
+
+            
+
+            Console.WriteLine("Hello World!");
+
+            Console.ReadKey();
+        }
+            static void writeAllValues(int[] values)
+            {
+                //for loop example
+                for (var index = 0; index < values.Length; index++)
+                {
+                    var value = values[index];
+                    //option 1
+                    Console.WriteLine(values);
+                    //option 2
+                    Console.WriteLine(values[index]);
+                }
+            }
+        }
+
+
+    }
+
+ 
