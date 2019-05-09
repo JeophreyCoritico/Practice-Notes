@@ -1,0 +1,120 @@
+
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Linq;
+
+using System.Text;
+
+using System.Threading.Tasks;
+
+
+
+namespace CowsAndBulls
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            void space()
+            {
+                Console.WriteLine();
+            }
+
+            int[] position = { 1, 2, 3, 4 };
+
+            Random random = new Random();
+            int ranText = random.Next(1, 9);
+            int ranText2 = random.Next(0, 9);
+            int ranText3 = random.Next(0, 9);
+            int ranText4 = random.Next(0, 9);
+
+            List<int> numValues = new List<int>(4);
+
+
+            void displayNum()
+            {
+                Console.Write(ranText);
+                Console.Write(ranText2);
+                Console.Write(ranText3);
+                Console.Write(ranText4);
+
+                numValues.Add(ranText);
+                numValues.Add(ranText2);
+                numValues.Add(ranText3);
+                numValues.Add(ranText4);
+
+                //position[1] = ranText;
+                //position[2] = ranText2;
+                //position[3] = ranText3;
+                //position[4] = ranText4;
+            }
+
+
+            int loopCounter = 0;
+
+            while (loopCounter < 1)
+            {
+                displayNum();
+                loopCounter++;
+            }
+
+            space();
+            space();
+
+            string input = Console.ReadLine();
+            int inputNum = int.Parse(input);
+
+            if (input[0] == ranText)
+            {
+                Console.WriteLine("Cow");
+            }
+
+            if (input[1] == ranText2)
+            {
+                Console.WriteLine("Cow");
+            }
+
+            if (input[2] == ranText3)
+            {
+                Console.WriteLine("Cow");
+            }
+
+            if (input[3] == ranText4)
+            {
+                Console.WriteLine("Cow");
+            }
+
+
+
+            //string input2 = Console.ReadLine();
+            //int inputNum2 = int.Parse(input2);
+
+            //if (inputNum2 == ranText2)
+            //{
+            //    Console.WriteLine("Cow");
+            //}
+
+            //string input3 = Console.ReadLine();
+            //int inputNum3 = int.Parse(input3);
+
+            //if (inputNum3 == ranText3)
+            //{
+            //    Console.WriteLine("Cow");
+            //}
+
+            //string input4 = Console.ReadLine();
+            //int inputNum4 = int.Parse(input4);
+
+            //if (inputNum4 == ranText4)
+            //{
+            //    Console.WriteLine("Cow");
+            //}
+
+            Console.ReadKey();
+        }
+    }
+}
